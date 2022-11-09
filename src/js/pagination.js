@@ -1,6 +1,6 @@
 import { refs } from './refs';
 import CardTemplate from '../templates/cardTpl.hbs';
-import { pageCount, searchValue, getImages } from '../index';
+/*import { pageCount, searchValue, getImages } from '../index';*/
 
 let globalTotalPages = 0;
 let globalPage = 0;
