@@ -6,7 +6,7 @@ const refs = {
   loader: document.querySelector('.js-loader'),
 };
 
-const lightbox = new SimpleLightbox('.gallery-list a', {
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
