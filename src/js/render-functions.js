@@ -52,7 +52,7 @@ export const createGallery = images => {
     )
     .join('');
 
-  refs.galleryList.insertAdjacentHTML('beforeend', galleryCardsTemplate);
+  refs.galleryList.innerHTML = galleryCardsTemplate;
 
   lightbox.refresh();
 };
