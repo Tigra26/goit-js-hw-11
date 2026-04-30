@@ -1,16 +1,9 @@
-import simpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 import { getImagesByQuery } from './js/pixabay-api.js';
-import {
-  createGallery,
-  clearGallery,
-  showLoader,
-  hideLoader,
-} from './js/render-functions.js';
+import { createGallery, clearGallery, showLoader, hideLoader } from './js/render-functions.js';
 
 const refs = {
   searchForm: document.querySelector('.js-submit-form'),
@@ -25,9 +18,11 @@ const onSearchFormSubmit = event => {
 
   if (!searchQuery) {
     iziToast.warning({
-      title: 'Caution',
       message: 'You forgot to type what you are looking for!',
       position: 'topRight',
+      color: '#FFCE1B',
+          maxWidth: '432px',
+          messageColor: '#ffffff',
     });
 
     return;
@@ -42,6 +37,9 @@ const onSearchFormSubmit = event => {
           message:
             'Sorry, there are no images matching your search query. Please try again!',
           position: 'topRight',
+          color: '#EF4040',
+          maxWidth: '432px',
+          messageColor: '#ffffff',
         });
 
         return;
@@ -53,6 +51,9 @@ const onSearchFormSubmit = event => {
       iziToast.error({
         message: 'Something went wrong. Please try again later.',
         position: 'topRight',
+        color: '#EF4040',
+          maxWidth: '432px',
+          messageColor: '#ffffff',
       });
 
       console.log(error.message);
